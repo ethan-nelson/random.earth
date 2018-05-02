@@ -17,12 +17,12 @@
   <div id="map"></div>
   <script>
     tile = Math.floor(Math.random() * 2**4 + 1);
-    var theMap = L.map('map').setView([0, 0],250);
+    var theMap = L.map('map').setView([0, 0],15);
     L.tileLayer('https://b.tile.openstreetmap.org/4/'+tile+'/'+tile+'.png', 
                 {
                   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
                   minZoom: 5,
-                  maxZoom: 500
+                  maxZoom: 25
                 }
                ).addTo(theMap);
   </script>
