@@ -5,13 +5,14 @@
 </head>
 <body>
   <style>
-    #map {
+    #map, body, html {
       height: 100%;
       width: 100%;
     }
   </style>
   <div id="map"></div>
   <script>
+    tile = Math.random();
     var theMap = L.map('map').setView([0, 0],4);
     L.tileLayer('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png', 
                 {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'}
