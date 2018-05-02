@@ -19,7 +19,11 @@
     tile = Math.floor(Math.random() * 2**4 + 1);
     var theMap = L.map('map').setView([0, 0],4);
     L.tileLayer('https://b.tile.openstreetmap.org/4/'+tile+'/'+tile+'.png', 
-                {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'}
+                {
+                  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+                  minZoom: 5,
+                  maxZoom: 25
+                }
                ).addTo(theMap);
   </script>
 </body>
